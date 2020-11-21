@@ -38,8 +38,40 @@ namespace GitDemo
             //Console.WriteLine(string.Join(',', firstOne));
             //Console.WriteLine(string.Join(',', secondOne));
 
-            Console.WriteLine(string.Join(',', firstOne));
-            Console.WriteLine(string.Join(',', firstOne.Reverse()));
+            //Console.WriteLine(string.Join(',', firstOne));
+            //Console.WriteLine(string.Join(',', firstOne.Reverse()));
+
+            string[] stringArray = new string[]
+            {
+                "Jan",
+                "feb",
+                "mar",
+                "apr",
+                "maj",
+                "jun",
+                "jul",
+                "aug",
+                "sep",
+                "okt",
+                "nov",
+                "dec",
+
+            };
+
+            string number;
+            int choice;
+
+            do
+            {
+                Console.WriteLine("Select a number from 1-12");
+                number = Console.ReadLine();
+                int.TryParse(number, out choice);
+                if(choice <= 12)
+                {
+                    Console.WriteLine(stringArray[choice - 1]);
+                }
+
+            } while (choice < 12);
 
         }
 
